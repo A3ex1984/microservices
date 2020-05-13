@@ -1,3 +1,9 @@
+# Alex Voets Submission Details
+
+Github Repo: https://github.com/A3ex1984/microservices 
+Docker Repo: https://hub.docker.com/repository/docker/a3ex1984/microservices
+
+
 # Udagram Image Filtering Application
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.

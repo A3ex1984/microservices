@@ -8,7 +8,8 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install dependencies in Docker
-RUN npm install
+# use npm ci rather than npm install as it is for continuous integration
+RUN npm ci 
 
 # Copy app from local environment into the Docker image
 COPY . .

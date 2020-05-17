@@ -15,9 +15,18 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node .
-  - docker tag simple-node YOUR_DOCKER_HUB/simple-node:latest
+  #- docker build -t reverseproxy .
+  #- docker tag reverseproxy a3ex/reverseproxy:latest
+  - docker build -t microuser .
+  - docker tag microuser a3ex/microservicesuser:latest
+  - docker build -t microfeed .
+  - docker tag microfeed a3ex/microservicesfeed:latest
+  - docker build -t frontend .
+  - docker tag frontend a3ex/microservices:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push YOUR_DOCKER_HUB/simple-node
+  #- docker push a3ex1984/recerseproxy
+  - docker push a3ex1984/microservicesuser
+  - docker push a3ex1984/microservicesfeed
+  - docker push a3ex1984/microservicesfeed

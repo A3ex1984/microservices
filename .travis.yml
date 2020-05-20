@@ -17,12 +17,18 @@ script:
   - docker --version # print the version for logging
   #- docker build -t reverseproxy .
   #- docker tag reverseproxy a3ex/reverseproxy:latest
+  - cd udagram-api-user/
   - docker build -t microuser .
   - docker tag microuser a3ex/microservicesuser:latest
+  - cd ..
+  - cd udagram-api-feed/
   - docker build -t microfeed .
   - docker tag microfeed a3ex/microservicesfeed:latest
+  - cd ..
+  - cd udagram-frontend/
   - docker build -t frontend .
   - docker tag frontend a3ex/microservices:latest
+  - cd ..
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin

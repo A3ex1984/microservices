@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: a3ex1984/reverseproxy 
+  backend_user:
+    build:
+      context: ./udagram-api-user
+    image: a3ex1984/microservicesuser
+  backend_feed:
+    build:
+      context: ./udagram-api-feed
+    image: a3ex1984/microservicesfeed
+  frontend:
+    build:
+      context: ./udagram-frontend
+    image: a3ex1984/microservices

@@ -10,7 +10,7 @@ COPY package*.json ./
 
 # Install dependencies in Docker
 # use npm ci rather than npm install as it is for continuous integration
-RUN npm ci
+RUN npm install
 
 # Copy app from local environment into the Docker image
 COPY . .

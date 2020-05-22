@@ -2,18 +2,18 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    service: reverseproxy
-  name: reverseproxy
+    service: frontend
+  name: frontend
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
-        service: reverseproxy
+        service: frontend
     spec:
       containers:
-      - image: YOUR_DOCKER_HUB/simple-reverse-proxy
-        name: reverseproxy
+      - image: a3ex1984/microservices
+        name: frontend
         imagePullPolicy: Always          
         resources:
           requests:

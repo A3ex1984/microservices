@@ -2,18 +2,18 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    service: backend-feed
-  name: backend-feed
+    service: backend-user
+  name: backend-user
 spec:
   replicas: 3
   template:
     metadata:
       labels:
-        service: backend-feed
+        service: backend-user
     spec:
       containers:
-      - image: a3ex1984/microservicesfeed
-        name: backend-feed
+      - image: a3ex1984/microservicesuser
+        name: backend-user
         imagePullPolicy: Always          
         resources:
           requests:

@@ -1,7 +1,10 @@
 # Alex Voets Submission Details
 
 Github Repo: https://github.com/A3ex1984/microservices 
-Docker Repo: https://hub.docker.com/repository/docker/a3ex1984/microservices
+Docker Frontend: https://hub.docker.com/repository/docker/a3ex1984/microservices
+Docker Microservices User: https://hub.docker.com/repository/docker/a3ex1984/microservicesuser 
+Docker Microservices Feed: https://hub.docker.com/repository/docker/a3ex1984/microservicesfeed 
+Docker Reverseproxy: https://hub.docker.com/repository/docker/a3ex1984/reverseproxy 
 
 
 # Udagram Image Filtering Application
